@@ -169,7 +169,7 @@ usage: cluster start [-h] [--hash HASH] [--spark {2.0.2,2.2.0}]
                      [--worker-machine-type WORKER_MACHINE_TYPE] [--zone ZONE]
                      [--properties PROPERTIES] [--metadata METADATA]
                      [--packages PACKAGES] [--jar JAR] [--zip ZIP]
-                     [--init INIT] [--init_timeout INIT_TIMEOUT] [--vep] [--dry-run]
+                     [--init INIT] [--init_timeout INIT_TIMEOUT] [--vep] [--vep-reference {GRCh37,GRCh38}] [--dry-run]
                      name
 Start a Dataproc cluster configured for Hail.
 
@@ -225,6 +225,8 @@ optional arguments:
                         Flag to specify a timeout period for the
                         initialization action
   --vep                 Configure the cluster to run VEP.
+  --vep-reference {GRCh37,GRCh38}      
+                        Define the reference build to be used when running VEP.
   --dry-run             Print gcloud dataproc command, but don't run it.```
 
 ```
